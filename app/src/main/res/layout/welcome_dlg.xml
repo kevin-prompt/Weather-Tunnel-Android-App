@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView android:id="@+id/welHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/eluDescription">
+    </TextView>
+    <TextView android:id="@+id/welWTeula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eluWTunnelAgr"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="5dp">
+    </TextView>
+    <CheckBox android:id="@+id/welChkRead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eluHaveRead">
+    </CheckBox> 
+    <Button android:id="@+id/welBtnAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onClickAccept"
+        android:text="@string/eluAccept">
+    </Button>
+</LinearLayout>
+

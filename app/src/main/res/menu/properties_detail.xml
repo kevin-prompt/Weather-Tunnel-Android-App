@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"  xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item android:id="@+id/mnuDetailAlert"
+    android:icon="@drawable/warning"
+    android:title="@string/mnuDetailAlert"
+    app:showAsAction="always">
+  </item>
+  <item android:id="@+id/mnuDetailRefresh"
+      android:icon="@drawable/ic_menu_refresh"
+      android:title="@string/blank"
+      app:showAsAction="ifRoom">
+  </item>
+  <item android:id="@+id/mnuDetailMap"
+    android:title="@string/mnuDetailMap">
+  </item>
+</menu>

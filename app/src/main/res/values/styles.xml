@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="WindowTitleBackground">
+      <item name="android:background">@color/ClearNight</item> 
+    </style>
+    <style name="CityTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+    <style name="CityTitleSpecial">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/YellowBrick</item> 
+        <item name="android:layout_centerHorizontal">true</item>
+     </style>
+    <style name="HorzBar">
+        <item name="android:text">@string/blank</item>
+        <item name="android:layout_width">fill_parent</item> 
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:background">@color/ClearNight</item>
+        <item name="android:textSize">4sp</item>
+    </style>
+    <style name="HorzBarDelimit">
+        <item name="android:src">@drawable/delimit_30x2</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:contentDescription">@string/img_delimithoz</item>        
+    </style>
+    <style name="WarningSign">
+        <item name="android:src">@drawable/warning</item>
+        <item name="android:contentDescription">@string/img_warning</item> 
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/BayBridgeWhite</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+    <style name="SpaceAbove">
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+</resources>

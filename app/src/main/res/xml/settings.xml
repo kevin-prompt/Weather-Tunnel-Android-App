@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="@string/abt_name">
+    <PreferenceScreen android:title="@string/prfIntroduction"
+      android:summary="@string/prfIntroductionSum">
+        <intent android:action="android.intent.action.VIEW"
+          android:data="@string/preIntroductionLnk">
+        </intent>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/prfAbout"
+      android:summary="@string/prfAboutSum">
+        <intent android:action="android.intent.action.MAIN"
+          android:targetPackage="coolftc.android.weather.tunnel"
+          android:targetClass="coolftc.android.weather.tunnel.About">
+        </intent>
+    </PreferenceScreen>
+    </PreferenceCategory>
+  <PreferenceCategory android:title="@string/set_name">      
+    <CheckBoxPreference android:key="1001"
+      android:title="@string/prfCheckLocation"
+      android:summary="@string/prfCheckLocationSum"
+      android:defaultValue="true">
+    </CheckBoxPreference>
+    <CheckBoxPreference android:key="1007"
+      android:title="@string/prfUseGPSLocation"
+      android:summary="@string/prfUseGPSLocationSum"
+      android:defaultValue="false">
+    </CheckBoxPreference>
+    <CheckBoxPreference android:key="1002"
+      android:title="@string/prfUseCelsius"
+      android:summary="@string/prfUseCelsiusSum"
+      android:defaultValue="false">
+    </CheckBoxPreference>
+    <CheckBoxPreference android:key="1003"
+      android:title="@string/prfUseMetric"
+      android:summary="@string/prfUseMetricSum"
+      android:defaultValue="false">
+    </CheckBoxPreference>
+    <CheckBoxPreference android:key="1006"
+      android:title="@string/prfUse24Clock"
+      android:summary="@string/prfUse24ClockSum"
+      android:defaultValue="false">
+    </CheckBoxPreference>
+    <CheckBoxPreference android:key="1004"
+      android:title="@string/prfUseInches"
+      android:summary="@string/prfUseInchesSum"
+      android:defaultValue="false">
+    </CheckBoxPreference>
+    <CheckBoxPreference android:key="1005"
+      android:title="@string/prfUseMeteorological"
+      android:summary="@string/prfUseMeteorologicalSum"
+      android:defaultValue="false">
+    </CheckBoxPreference>
+    <ListPreference android:key="1008"
+        android:title="@string/prfPickDateFormat"
+        android:summary="@string/prfPickDateFormatSum"
+        android:entries="@array/dateorder"
+        android:entryValues="@array/dateorder_values"
+        android:defaultValue="@string/prfPickDateFormatDefault">
+    </ListPreference>
+    <CheckBoxPreference android:key="1009"
+      android:title="@string/prfShowStations"
+      android:summary="@string/prfShowStationsSum"
+      android:defaultValue="false">
+    </CheckBoxPreference>
+    </PreferenceCategory>
+</PreferenceScreen>

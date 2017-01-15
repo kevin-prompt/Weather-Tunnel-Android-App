@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="?android:attr/listPreferredItemHeight"
+  android:background="@color/BlueBrick"
+  android:paddingTop="5dp"
+  android:paddingLeft="5dp">
+  <TextView android:id="@+id/qvrow_Id"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone">
+  </TextView>
+  <TextView android:id="@+id/qvrowCity"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:textStyle="italic"
+    android:textColor="@color/BrightChar"
+    android:maxLines="1"
+    android:layout_toRightOf="@+id/qvrow_Id">
+  </TextView>
+  <TextView android:id="@+id/qvrowState"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:textStyle="italic"
+    android:textColor="@color/BrightChar"
+    android:layout_toRightOf="@+id/qvrowCity">
+  </TextView>
+  <TextView android:id="@+id/qvrowSpecial"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/YellowBrick"
+    android:layout_marginLeft="20dp"
+    android:layout_below="@+id/qvrowCity"
+    android:layout_toRightOf="@+id/qvrow_Id">
+  </TextView>
+</RelativeLayout>

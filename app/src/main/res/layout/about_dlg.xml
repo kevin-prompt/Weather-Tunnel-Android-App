@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout 
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:paddingLeft="5dp"
+  android:paddingStart="5dp"
+  android:shrinkColumns="1"
+  android:stretchColumns="1"
+  android:onClick="frmCloseOnClick">
+  <TableRow>
+    <TextView android:id="@+id/abt_title" android:text="Title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="5dp"
+      android:paddingRight="10dp"
+      android:gravity="right">
+    </TextView>
+    <TextView android:id="@+id/ver_title" android:text="@string/ver_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="5dp"
+      android:gravity="left">
+    </TextView>
+  </TableRow>
+  <TableRow>
+    <TextView android:id="@+id/abt_desc" android:text="Description"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="5dp"
+      android:paddingRight="10dp"
+      android:gravity="right">
+    </TextView>
+    <TextView android:id="@+id/ver_desc" android:text="@string/ver_desc"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="5dp"
+      android:gravity="left">
+    </TextView>
+  </TableRow>
+  <TableRow>
+    <TextView android:id="@+id/abt_author" android:text="Author"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="5dp"
+      android:paddingRight="10dp"
+      android:gravity="right">
+    </TextView>
+    <TextView android:id="@+id/ver_author" android:text="@string/ver_author"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="5dp"
+      android:gravity="left">
+    </TextView>
+  </TableRow>
+  <TableRow>
+    <TextView android:id="@+id/abt_copyright" android:text="Copyright"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="5dp"
+      android:paddingRight="10dp"
+      android:gravity="right">
+    </TextView>
+    <TextView android:id="@+id/ver_copyright" android:text="@string/ver_copyright"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="5dp"
+      android:gravity="left">
+    </TextView>
+  </TableRow>
+  <TableRow>
+    <TextView android:id="@+id/abt_company" android:text="Company"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="5dp"
+      android:paddingRight="10dp"
+      android:gravity="right">
+    </TextView>
+    <TextView android:id="@+id/ver_company" android:text="@string/ver_company"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="5dp"
+      android:gravity="left">
+    </TextView>
+  </TableRow>
+  <View android:layout_height="2dp"
+      android:layout_marginTop="5dp"
+      android:background="#FF909090" />
+  <TableRow>
+    <TextView android:id="@+id/abt_nbr" android:text="Version"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="5dp"
+      android:paddingRight="10dp"
+      android:gravity="right">
+    </TextView>
+    <TextView android:id="@+id/ver_nbr" android:text="@string/ver_nbr"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="5dp"
+      android:gravity="left">
+    </TextView>
+  </TableRow>
+  <TableRow>
+    <TextView android:id="@+id/abt_build" android:text="Last Build"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="5dp"
+      android:paddingRight="10dp"
+      android:paddingBottom="20dp"
+      android:gravity="right">
+    </TextView>
+    <TextView android:id="@+id/ver_build" android:text="@string/ver_build"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="5dp"
+      android:gravity="left">
+    </TextView>
+  </TableRow>
+</TableLayout>

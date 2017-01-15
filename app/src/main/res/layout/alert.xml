@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content"> 
+    <RelativeLayout android:id="@+id/warning_loc_bar"    
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:background="@color/BayBridgeWhite"
+        android:layout_alignParentTop="true">
+        <!--  Location  -->
+        <TextView android:id="@+id/lblTopBarAlr" style="@style/HorzBar"
+          android:layout_alignParentTop="true">
+        </TextView>
+        <TextView android:id="@+id/txtCityAlr" style="@style/CityTitle"
+          android:layout_below="@+id/lblTopBarAlr">
+        </TextView>
+        <TextView android:id="@+id/txtSpecialAlr" style="@style/CityTitleSpecial"
+          android:layout_marginTop="30dp"
+          android:layout_below="@+id/lblTopBar">
+        </TextView>
+        <ImageView android:id="@+id/imgWarningBack" android:src="@drawable/back"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:contentDescription="@string/img_back"
+          android:onClick="displayMoreOnClick"
+          android:padding="10dp"
+          android:layout_alignTop="@+id/txtCityAlr"
+          android:layout_alignParentLeft="true">
+        </ImageView>
+        <ImageView android:id="@+id/imgWarningNext" android:src="@drawable/next"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:contentDescription="@string/img_next"
+          android:onClick="displayMoreOnClick"
+          android:padding="10dp"
+          android:layout_alignTop="@+id/txtCityAlr"
+          android:layout_alignParentRight="true">
+        </ImageView>
+            <!--  Title  -->
+        <ImageView android:id="@+id/imgWarningAlr" style="@style/WarningSign"
+          android:layout_below="@+id/txtSpecialAlr">
+        </ImageView>
+        <TextView android:id="@+id/lblCondBarAlr"
+          android:layout_width="fill_parent" 
+          android:layout_height="wrap_content"
+          android:background="@color/BlueLiteBrick"
+          android:textSize="18sp"
+          android:padding="3dp"
+          android:textColor="@color/BrightChar"
+          android:layout_alignBottom="@+id/imgWarningAlr"
+          android:layout_toRightOf="@+id/imgWarningAlr">
+        </TextView>
+        <ImageView android:id="@+id/imgWarningAlr2" style="@style/WarningSign" 
+          android:layout_below="@+id/txtSpecialAlr"
+          android:layout_alignParentRight="true">
+        </ImageView>
+        <TextView android:id="@+id/txtExpireAlr"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/BasicRed"
+          android:layout_marginLeft="15dp"
+          android:layout_alignLeft="@+id/lblCondBarAlr"
+          android:layout_below="@+id/imgWarningAlr">
+        </TextView>
+        <TextView android:id="@+id/txtWarningCnt"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/BasicRed"
+          android:textStyle="italic"
+          android:layout_marginLeft="15dp"
+          android:layout_toLeftOf="@+id/imgWarningAlr2"
+          android:layout_below="@+id/imgWarningAlr">
+        </TextView>
+        <TextView android:id="@+id/txtExpireTimeAlr"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/BasicRed"
+          android:paddingBottom="12dp"
+          android:layout_alignLeft="@+id/txtExpireAlr"
+          android:layout_below="@+id/txtExpireAlr">
+        </TextView>
+    </RelativeLayout> 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/warning_loc_bar"> 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:onClick="frmCloseOnClick"
+            android:background="@color/BayBridgeWhite">
+            <!--  Message  -->
+            <ImageView android:id="@+id/imgWarningAlr3" style="@style/WarningSign"
+              android:visibility="invisible"
+              android:layout_alignParentLeft="true">
+            </ImageView>
+            <TextView android:id="@+id/txtMsgAlr"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingBottom="15dp"
+              android:layout_marginRight="25dp"
+              android:layout_toRightOf="@+id/imgWarningAlr3">
+            </TextView>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

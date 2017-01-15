@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dateorder">
+        <item>02/21/2014 \n(MM/DD/YYYY)</item>
+        <item>21/02/2014 \n(DD/MM/YYYY)</item>
+        <item>2014/21/02 \n(YYYY/MM/DD)</item>
+    </string-array>
+    <string-array name="dateorder_values">
+        <item>mid</item>
+        <item>sml</item>
+        <item>big</item>
+    </string-array>
+</resources>

@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+      <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/BlueBrick">
+
+        <!-- Descriptive Conditions -->
+        <TextView android:id="@+id/lblTopBar" style="@style/HorzBar"
+          android:layout_alignParentTop="true">
+        </TextView>
+        <TextView android:id="@+id/txtCity" style="@style/CityTitle"
+          android:clickable="true" 
+          android:layout_below="@+id/lblTopBar">
+        </TextView>
+        <TextView android:id="@+id/txtSpecial" style="@style/CityTitleSpecial"
+          android:layout_marginTop="25dp"
+          android:layout_below="@+id/lblTopBar">
+        </TextView>
+        <TextView android:id="@+id/txtTemperature"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="44sp"
+          android:paddingRight="20sp"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@+id/txtSpecial">
+        </TextView>
+        <TextView android:id="@+id/txtFeelsLike"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="12sp"
+          android:paddingRight="20sp"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@+id/txtTemperature">
+        </TextView>
+        <TextView android:id="@+id/txtTempIsAvg"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingTop="10dp"
+          android:paddingRight="20sp"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@+id/txtFeelsLike">
+        </TextView>
+        <TextView android:id="@+id/lblTempIsAvg" android:text="@string/lblTempAvg"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingRight="20sp"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@+id/txtTempIsAvg">
+        </TextView>
+        <TextView android:id="@+id/txtAirMoist"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingTop="7sp"
+          android:paddingRight="20sp"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@+id/lblTempIsAvg">
+         </TextView>
+        <ImageView android:id="@+id/imgCondition"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:contentDescription="@string/img_condition" 
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="40dp"
+          android:layout_below="@+id/txtSpecial">
+        </ImageView>
+        <TextView android:id="@+id/txtCondition"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/imgCondition"
+          android:layout_below="@+id/imgCondition">
+        </TextView>
+        <TextView android:id="@+id/txtSeason"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingTop="5dp"
+          android:paddingBottom="10dp"
+          android:layout_alignLeft="@+id/txtCondition"
+          android:layout_below="@+id/txtCondition">
+        </TextView>
+        <TextView android:id="@+id/txtLocalTime"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="22sp"
+          android:layout_marginRight="22dp"
+          android:layout_marginTop="40dp"
+          android:paddingBottom="10dp"
+          android:layout_alignParentRight="true"
+          android:layout_below="@+id/txtSpecial">
+        </TextView>
+        <TextView android:id="@+id/lblLocalTimeNextDay"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="12sp"
+          android:layout_alignRight="@+id/txtLocalTime"
+          android:layout_alignBottom="@+id/txtLocalTime">
+        </TextView>
+        <TextView android:id="@+id/txtWindCond"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/txtLocalTime"
+          android:layout_alignBaseline="@+id/txtCondition">
+        </TextView>
+        <TextView android:id="@+id/txtPressureRate"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/txtLocalTime"
+          android:layout_alignBaseline="@+id/txtSeason">
+        </TextView>
+        <TextView android:id="@+id/txtWAlertMsg"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/BrightYellow"
+          android:textSize="12sp"
+          android:layout_marginTop="5dp"
+          android:maxLines="1"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@+id/txtSeason">
+        </TextView>
+        
+        <!-- Detailed Conditions -->
+        <TextView android:id="@+id/lblCondBar" style="@style/HorzBar"
+          android:layout_below="@+id/txtWAlertMsg">
+        </TextView>
+        <TextView android:id="@+id/txtObservation"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="14sp"
+          android:layout_alignParentRight="true" 
+          android:layout_below="@+id/lblCondBar">
+        </TextView>  
+        <TextView android:id="@+id/lblWind" style="@style/SpaceAbove" android:text="@string/lblWind"
+          android:layout_toLeftOf="@+id/txtTempIsAvg"
+          android:layout_below="@+id/txtObservation">
+        </TextView>
+        <TextView android:id="@+id/txtWind" style="@style/SpaceAbove"
+          android:layout_marginLeft="5dp"
+          android:layout_toRightOf="@+id/lblWind"
+          android:layout_below="@+id/txtObservation">
+        </TextView>
+        <TextView android:id="@+id/lblWindDir" android:text="@string/lblWindDir"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignRight="@+id/lblWind"
+          android:layout_below="@+id/lblWind">
+        </TextView>
+        <TextView android:id="@+id/txtWindDir"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/txtWind"
+          android:layout_below="@+id/lblWind">
+        </TextView>
+        <TextView android:id="@+id/lblPressure" android:text="@string/lblPressure"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignRight="@+id/lblWindDir"
+          android:layout_below="@+id/lblWindDir">
+        </TextView>
+        <TextView android:id="@+id/txtPressure"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/txtWindDir"
+          android:layout_below="@+id/lblWindDir">
+        </TextView>
+        <TextView android:id="@+id/lblTempAverages" android:text="@string/lblTempAverages"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignRight="@+id/lblPressure"
+          android:layout_below="@+id/lblPressure">
+        </TextView>
+        <TextView android:id="@+id/txtTempAverages"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/txtPressure"
+          android:layout_below="@+id/lblPressure">
+        </TextView>
+        <TextView android:id="@+id/lblTempRecords" android:text="@string/lblTempRecords"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignRight="@+id/lblTempAverages"
+          android:layout_below="@+id/lblTempAverages">
+        </TextView>
+        <TextView android:id="@+id/txtTempRecords"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/txtTempAverages"
+          android:layout_below="@+id/lblTempAverages">
+        </TextView>
+        <TextView android:id="@+id/lblDewPoint" style="@style/SpaceAbove" android:text="@string/lblDewPoint"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignRight="@+id/lblTempRecords"
+          android:layout_below="@+id/lblTempRecords">
+       </TextView>
+        <TextView android:id="@+id/txtDewPoint" style="@style/SpaceAbove"
+          android:layout_alignLeft="@+id/txtTempRecords"
+          android:layout_below="@+id/lblTempRecords">
+        </TextView>
+        <TextView android:id="@+id/lblHumidity" android:text="@string/lblHumidity"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignRight="@+id/lblDewPoint"
+          android:layout_below="@+id/lblDewPoint">
+        </TextView>
+        <TextView android:id="@+id/txtHumidity"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/txtDewPoint"
+          android:layout_below="@+id/lblDewPoint">
+        </TextView>
+        <TextView android:id="@+id/lblRain" android:text="@string/lblRain"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignRight="@+id/lblHumidity"
+          android:layout_below="@+id/lblHumidity">
+        </TextView>
+        <TextView android:id="@+id/txtRain"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/txtHumidity"
+          android:layout_below="@+id/lblHumidity">
+        </TextView>
+        <TextView android:id="@+id/lblVisibility" android:text="@string/lblVisibility"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignRight="@+id/lblRain"
+          android:layout_below="@+id/lblRain">
+        </TextView>
+        <TextView android:id="@+id/txtVisibility"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/txtRain"
+          android:layout_below="@+id/lblRain">
+        </TextView>
+        <TextView android:id="@+id/lblElevation" style="@style/SpaceAbove" android:text="@string/lblElevation"
+          android:layout_alignRight="@+id/lblVisibility"
+          android:layout_below="@+id/lblVisibility">
+        </TextView>
+        <TextView android:id="@+id/txtElevation" style="@style/SpaceAbove"
+          android:layout_marginLeft="2dp"
+          android:layout_alignLeft="@+id/txtVisibility"
+          android:layout_below="@+id/lblVisibility">
+        </TextView>
+        <TextView android:id="@+id/lblPrivateDist" android:text="@string/lblPrivateDist"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignRight="@+id/lblElevation"
+          android:layout_below="@+id/lblElevation">
+        </TextView>
+        <TextView android:id="@+id/txtPrivateDist"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="2dp"
+          android:layout_alignLeft="@+id/txtElevation"
+          android:layout_below="@+id/lblElevation">
+        </TextView>
+        <TextView android:id="@+id/lblPublicDist" android:text="@string/lblPublicDist"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignRight="@+id/lblPrivateDist"
+          android:layout_below="@+id/lblPrivateDist">
+        </TextView>
+        <TextView android:id="@+id/txtPublicDist"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/txtPrivateDist"
+          android:layout_below="@+id/lblPrivateDist">
+        </TextView>
+        
+        <!-- Forecast Conditions -->
+        <TextView android:id="@+id/lblForecastBar" style="@style/HorzBar"
+          android:layout_below="@+id/lblPublicDist">
+        </TextView>
+        <TextView android:id="@+id/txtHighTemp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="7dp"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/lblForecastBar">
+        </TextView>
+        <TextView android:id="@+id/lblHighTemp" android:text="@string/lblForecastHigh"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="12sp"
+          android:paddingLeft="3dp"
+          android:layout_marginBottom="2dp"
+          android:layout_toRightOf="@+id/txtHighTemp"
+          android:layout_alignBottom="@+id/txtHighTemp">
+        </TextView>
+        <TextView android:id="@+id/txtLowTemp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="7dp"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/txtHighTemp">
+        </TextView>  
+        <TextView android:id="@+id/lblLowTemp" android:text="@string/lblForecastLow"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="12sp"
+          android:paddingLeft="3dp"
+          android:layout_marginBottom="2dp"
+          android:layout_alignLeft="@+id/lblHighTemp"
+          android:layout_alignBottom="@+id/txtLowTemp">
+        </TextView>
+        <TextView android:id="@+id/txtRainChance"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="7dp"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/txtLowTemp">
+        </TextView>
+        <TextView android:id="@+id/lblRainChance"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="12sp"
+          android:paddingLeft="3dp"
+          android:layout_marginBottom="2dp"
+          android:layout_toRightOf="@+id/txtRainChance"
+          android:layout_alignBottom="@+id/txtRainChance">
+        </TextView>
+        <TextView android:id="@+id/lblForecast" android:text="@string/lblForecastTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:layout_below="@+id/lblForecastBar">
+        </TextView>
+        <TextView android:id="@+id/txtForeCastDay"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:layout_below="@+id/lblForecast">
+        </TextView>  
+        <TextView android:id="@+id/txtForeCastTime"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:layout_below="@+id/txtForeCastDay">
+        </TextView>  
+        <ImageView android:id="@+id/imgMoonPhase"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:contentDescription="@string/img_moonphase"
+          android:layout_alignParentRight="true"
+          android:paddingRight="20dp"
+          android:layout_marginTop="5dp"
+          android:layout_below="@+id/lblForecastBar">
+        </ImageView>
+        <TextView android:id="@+id/txtMoonCond"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="12sp"
+          android:layout_alignLeft="@+id/imgMoonPhase"
+          android:layout_below="@+id/imgMoonPhase">
+        </TextView>    
+        <ImageView android:id="@+id/imgTodayCond"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:contentDescription="@string/img_todaycond"
+          android:layout_marginLeft="10dp"
+          android:layout_marginTop="15dp"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/txtRainChance">
+        </ImageView>
+        <TextView android:id="@+id/txtTodayCond"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="12sp"
+          android:layout_marginLeft="5dp"
+          android:layout_alignLeft="@+id/imgTodayCond"
+          android:layout_below="@+id/imgTodayCond">
+        </TextView>
+        <TextView android:id="@+id/txtTodayTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textStyle="italic"
+          android:textSize="14sp"
+          android:layout_marginLeft="10dp"
+          android:layout_toRightOf="@+id/imgTodayCond"
+          android:layout_alignTop="@+id/imgTodayCond">
+        </TextView>
+        <TextView android:id="@+id/txtTodayText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="12sp"
+          android:layout_marginLeft="12dp"
+          android:layout_alignLeft="@+id/txtTodayTitle"
+          android:layout_below="@+id/txtTodayTitle">
+        </TextView>
+        <ImageView android:id="@+id/imgTodayDelimit" style="@style/HorzBarDelimit"
+          android:layout_marginLeft="12dp"
+          android:layout_alignLeft="@+id/txtTodayTitle"
+          android:layout_below="@+id/txtTodayText">
+        </ImageView>
+        <TextView android:id="@+id/txtTodayWind"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="12sp"
+          android:layout_marginLeft="12dp"
+          android:layout_alignLeft="@+id/txtTodayTitle"
+          android:layout_below="@+id/imgTodayDelimit">
+        </TextView>
+        <ImageView android:id="@+id/imgTonightCond"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:contentDescription="@string/img_tonightcond" 
+          android:layout_marginLeft="10dp"
+          android:layout_marginTop="15dp"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/txtTodayWind">
+        </ImageView>
+        <TextView android:id="@+id/txtTonightCond"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="12sp"
+          android:layout_marginLeft="5dp"
+          android:layout_alignLeft="@+id/imgTonightCond"
+          android:layout_below="@+id/imgTonightCond">
+        </TextView>
+        <TextView android:id="@+id/txtTonightTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textStyle="italic"
+          android:textSize="14sp"
+          android:layout_marginLeft="10dp"
+          android:layout_toRightOf="@+id/imgTonightCond"
+          android:layout_alignTop="@+id/imgTonightCond">
+        </TextView>
+        <TextView android:id="@+id/txtTonightText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="12sp"
+          android:layout_marginLeft="12dp"
+          android:layout_alignLeft="@+id/txtTonightTitle"
+          android:layout_below="@+id/txtTonightTitle">
+        </TextView>
+        <ImageView android:id="@+id/imgTonightDelimit" style="@style/HorzBarDelimit"
+          android:layout_marginLeft="12dp"
+          android:layout_alignLeft="@+id/txtTonightTitle"
+          android:layout_below="@+id/txtTonightText">
+        </ImageView>
+        <TextView android:id="@+id/txtTonightWind"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="12sp"
+          android:layout_marginLeft="12dp"
+          android:layout_marginBottom="10dp"
+          android:layout_alignLeft="@+id/txtTonightTitle"
+          android:layout_below="@+id/imgTonightDelimit">
+        </TextView>
+        <TextView android:id="@+id/lblSunRise" android:text="@string/lblSunrise"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="12sp"
+          android:textColor="@color/YellowBrick"
+          android:layout_marginTop="5dp"
+          android:layout_alignLeft="@+id/imgSunRise"
+          android:layout_below="@+id/txtTonightWind">
+        </TextView>    
+        <ImageView android:id="@+id/imgSunRise"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:contentDescription="@string/img_sunrise"
+          android:layout_marginLeft="10dp"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/lblSunRise">
+        </ImageView>
+        <TextView android:id="@+id/txtSunRiseTime"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="5dp"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/imgSunRise">
+        </TextView>
+        <TextView android:id="@+id/lblSunSet" android:text="@string/lblSunset"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="12sp"
+          android:textColor="@color/YellowBrick"
+          android:layout_marginTop="5dp"
+          android:layout_alignLeft="@+id/imgSunSet"
+          android:layout_below="@+id/txtTonightWind">
+        </TextView>    
+        <ImageView android:id="@+id/imgSunSet"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:contentDescription="@string/img_sunset"
+          android:layout_alignParentRight="true"
+          android:paddingRight="18dp"
+          android:layout_below="@+id/lblSunSet">
+        </ImageView>
+        <TextView android:id="@+id/txtSunSetTime"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingRight="8dp"
+          android:layout_alignParentRight="true"
+          android:layout_below="@+id/imgSunSet">
+        </TextView>
+        <TextView android:id="@+id/lblPower" android:text="@string/ver_power"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="10sp"
+          android:textColor="@color/YellowBrick"
+          android:layout_centerHorizontal="true"
+          android:layout_alignBottom="@+id/txtSunSetTime">
+        </TextView>    
+        <ImageView android:id="@+id/powerWUlogopower" android:src="@drawable/wulogopower"
+          android:contentDescription="@string/wug_name"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_below="@+id/lblPower">
+        </ImageView>
+      </RelativeLayout>
+</ScrollView>

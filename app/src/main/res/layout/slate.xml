@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content"> 
+    <TextView android:id="@+id/lblSlatebar" style="@style/HorzBar"
+      android:layout_marginTop="2dp"  
+      android:layout_alignParentTop="true">
+    </TextView>
+    <LinearLayout
+        android:layout_width="fill_parent"    
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/lblSlatebar">
+      <com.mobeta.android.dslv.DragSortListView
+          android:id="@android:id/list" 
+          android:layout_width="wrap_content"    
+          android:layout_height="wrap_content" 
+          android:cacheColorHint="@color/BlueBrick"
+          local:collapsed_height="3dp"
+          local:remove_enabled="false"
+          local:drag_handle_id="@id/rowTemperature">
+      </com.mobeta.android.dslv.DragSortListView>  
+      <TextView android:id="@android:id/empty" android:text="@string/lblNoLocations"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="25dp"/>
+    </LinearLayout>
+</RelativeLayout>
